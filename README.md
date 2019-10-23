@@ -16,14 +16,15 @@ The goal of the project is to automatically generate quizzes out of easily reada
 
 ### Domain Model
 
-* Quiz 
+* Quiz
   * Title
-  * Description
-  * Questions
-    * Title
-    * Options
-      * Points
-      * IsCorrect
+  * Sections
+    * Section
+      * Questions
+        * Description
+        * Choices
+        * IsCorrect
+        * Points
 	* Feedback
 	  * Correct
 	  * Incorrect
@@ -32,64 +33,75 @@ The goal of the project is to automatically generate quizzes out of easily reada
 
 Correctness of a choice is indicated by the checkbox selection in the choice option.
 
+NOTE: Using markdown to write the quiz isn't supported yet. For now, we are reading from a Google spreadsheet, found here: https://docs.google.com/spreadsheets/d/1YAnQRDM_V62QMl5mRvuoK0zaAphbv1fxyNpM6HbVLks/edit#gid=1965524460
+
 ```
 # <title of the quiz>
 
-* <Description of the quiz>
+## <section>
 
-## <Question title>
+### <question>
 
   * [ ] <incorrect choice>
   * [ ] <incorrect choice>
   * [x] <correct choice>
   * [ ] <incorrect choice>
-  * Correct: <feedback on correct choice>
-  * Incorrect: <feedback on incorrect choice>
-  * Points: <number, e.g. 1>
-  
-## <Question title>
+
+Description: <description of question>
+Correct: <feedback on correct choice>
+Incorrect: <feedback on incorrect choice>
+Points: <number, e.g. 1>
+
+### <question>
 
   * [x] <correct choice>
   * [ ] <incorrect choice>
   * [x] <correct choice>
   * [ ] <incorrect choice>
-  * Correct: <feedback on correct choice>
-  * Incorrect: <feedback on incorrect choice>
-  * Points: <number, e.g. 1>
+
+Description: <description of question>
+Correct: <feedback on correct choice>
+Incorrect: <feedback on incorrect choice>
+Points: <number, e.g. 1>
 ```
 
 ### JSON Format
 
 ```
 {
-  "title": "Datopian Quiz Test",
-  "description": "Relax and everything will be ok",
-  "questions": [
-      {
-          "title": "Who wrote Pattern Languages?",
-          "description": "",
+  "title": "<title of the quiz>",
+  "sections": [
+    {
+      "section": "<section title>",
+      "questions": [
+        {
+          "question": "<question>",
           "choices": [
-              {
-                  "text": "Kent Beck",
-                  "isCorrect": false,
-              },
-              {
-                  "text": "Christopher Alexander",
-                  "isCorrect": true
-              },
-              {
-                  "text": "Robert Martin",
-                  "isCorrect": false
-              }
+            "<incorrect choice>",
+            "<incorrect choice>",
+            "<correct choice>",
+            "<incorrect choice>"
           ],
-          "type": "MULTIPLE_CHOICE",
-          "points": 1,
-          "feedback": {
-            "correct": "Awesome",
-            "incorrect": "Read more"
-          }
-      }
+          "description": "<description of question>",
+          "correct": "<feedback on correct choice>",
+          "incorrect": "<feedback on incorrect choice>",
+          "points": "<number, e.g. 1>"
+        },
+        {
+          "question": "<question>",
+          "choices": [
+            "<correct choice>",
+            "<incorrect choice>",
+            "<correct choice>",
+            "<incorrect choice>"
+          ],
+          "description": "<description of question>",
+          "correct": "<feedback on correct choice>",
+          "incorrect": "<feedback on incorrect choice>",
+          "points": "<number, e.g. 1>"
+        }
+      ]
+    }
   ]
 }
-
 ```
