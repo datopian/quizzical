@@ -69,39 +69,29 @@ Points: <number, e.g. 1>
 
 ```
 {
-  "title": "<title of the quiz>",
-  "sections": [
-    {
-      "section": "<section title>",
-      "questions": [
+    "title": "<title of the quiz>",
+    "pages": [
         {
-          "question": "<question>",
-          "choices": [
-            "<incorrect choice>",
-            "<incorrect choice>",
-            "<correct choice>",
-            "<incorrect choice>"
-          ],
-          "description": "<description of question>",
-          "correct": "<feedback on correct choice>",
-          "incorrect": "<feedback on incorrect choice>",
-          "points": "<number, e.g. 1>"
-        },
-        {
-          "question": "<question>",
-          "choices": [
-            "<correct choice>",
-            "<incorrect choice>",
-            "<correct choice>",
-            "<incorrect choice>"
-          ],
-          "description": "<description of question>",
-          "correct": "<feedback on correct choice>",
-          "incorrect": "<feedback on incorrect choice>",
-          "points": "<number, e.g. 1>"
+            "title": "<page title>",
+            "questions": [
+                {
+                    "question": "<question>",
+                    "description": "<description of question>",
+                    "choices": [
+                        "<incorrect choice>",
+                        "<incorrect choice>",
+                        "<correct choice>",
+                        "<incorrect choice>"
+                    ],
+                    "feedback": {
+                        "correct": "<feedback on correct choice>",
+                        "incorrect": "<feedback on incorrect choice>",
+                        "link": "<link to more information>"
+                    },
+                    "points": "<number, e.g. 1>"
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }
 ```
