@@ -20,14 +20,16 @@ The goal of the project is to automatically generate quizzes out of easily reada
   * Title
   * Pages
     * Page
-      * Questions
-        * Text
-        * Description
-        * Answers
+      * Title
+      * Questions  
+        * Question
+          * Text
+          * Description
+          * Answers
             * Text
             * IsCorrect
-        * Points
-	    * Feedback
+          * Points
+	      * Feedback
 	        * Correct
 	        * Incorrect
 
