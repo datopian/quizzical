@@ -75,13 +75,13 @@ Points: <number, e.g. 1>
             "title": "<page title>",
             "questions": [
                 {
-                    "title": "<question itself>",
+                    "text": "<question itself>",
                     "description": "<description of the question>",
                     "choices": [
-                        "<incorrect choice>",
-                        "<incorrect choice>",
-                        "<correct choice>",
-                        "<incorrect choice>"
+                        {
+                            "text": "<choice: answer to the question>",
+                            "isCorrect": "<true/false>"
+                        }
                     ],
                     "feedback": {
                         "correct": "<feedback on correct choice>",
