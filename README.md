@@ -75,8 +75,8 @@ Points: <number, e.g. 1>
             "title": "<page title>",
             "questions": [
                 {
-                    "question": "<question>",
-                    "description": "<description of question>",
+                    "title": "<question itself>",
+                    "description": "<description of the question>",
                     "choices": [
                         "<incorrect choice>",
                         "<incorrect choice>",
