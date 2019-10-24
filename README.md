@@ -84,8 +84,8 @@ Points: <number, e.g. 1>
                         }
                     ],
                     "feedback": {
-                        "correct": "<feedback on correct choice>",
-                        "incorrect": "<feedback on incorrect choice>",
+                        "correct": "<feedback for correct choice>",
+                        "incorrect": "<feedback for incorrect choice>",
                         "link": "<link to more information>"
                     },
                     "points": "<number, e.g. 1>"
