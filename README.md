@@ -81,15 +81,15 @@ Points: <number, e.g. 1>
                 {
                     "text": "<question itself>",
                     "description": "<description of the question>",
-                    "choices": [
+                    "answers": [
                         {
-                            "text": "<choice: answer to the question>",
+                            "text": "<answer to the question>",
                             "isCorrect": "<true/false>"
                         }
                     ],
                     "feedback": {
-                        "correct": "<feedback for correct choice>",
-                        "incorrect": "<feedback for incorrect choice>",
+                        "correct": "<feedback for correct answer>",
+                        "incorrect": "<feedback for incorrect answer>",
                         "link": "<link to more information>"
                     },
                     "points": "<number, e.g. 1>"
