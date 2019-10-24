@@ -10,7 +10,7 @@ The goal of the project is to automatically generate quizzes out of easily reada
 
 2. TODO: The script (?) reads the human readable form and saves the result to a JSON file in the web.
 
-3. The app script reads the json file and creates a google form with the quizz.
+3. The app script reads the json file and creates a google form with the quiz.
 
 ## Formats
 
@@ -18,16 +18,18 @@ The goal of the project is to automatically generate quizzes out of easily reada
 
 * Quiz
   * Title
-  * Sections
-    * Section
+  * Pages
+    * Page
       * Questions
+        * Text
         * Description
-        * Choices
-        * IsCorrect
+        * Answers
+            * Text
+            * IsCorrect
         * Points
-	* Feedback
-	  * Correct
-	  * Incorrect
+	    * Feedback
+	        * Correct
+	        * Incorrect
 
 ### Markdown Format
 
