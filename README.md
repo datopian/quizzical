@@ -35,38 +35,29 @@ The goal of the project is to automatically generate quizzes out of easily reada
 
 ### Markdown Format
 
-Correctness of a choice is indicated by the checkbox selection in the choice option.
+Correctness of a answer is indicated by the checkbox selection in the answer option.
 
 NOTE: Using markdown to write the quiz isn't supported yet. For now, we are reading from a Google spreadsheet, found here: https://docs.google.com/spreadsheets/d/1YAnQRDM_V62QMl5mRvuoK0zaAphbv1fxyNpM6HbVLks/edit#gid=1965524460
 
-```
+```markdown
 # <title of the quiz>
 
-## <section>
+## <page title>
 
 ### <question>
 
-  * [ ] <incorrect choice>
-  * [ ] <incorrect choice>
-  * [x] <correct choice>
-  * [ ] <incorrect choice>
+<description of the question>
 
-Description: <description of question>
-Correct: <feedback on correct choice>
-Incorrect: <feedback on incorrect choice>
+  * [ ] <incorrect answer>
+  * [ ] <incorrect answer>
+  * [x] <correct answer>
+  * [ ] <incorrect answer>
+
 Points: <number, e.g. 1>
 
-### <question>
-
-  * [x] <correct choice>
-  * [ ] <incorrect choice>
-  * [x] <correct choice>
-  * [ ] <incorrect choice>
-
-Description: <description of question>
-Correct: <feedback on correct choice>
-Incorrect: <feedback on incorrect choice>
-Points: <number, e.g. 1>
+#### Feedback
+Correct: <feedback on correct answer>
+Incorrect: <feedback on incorrect answer>
 ```
 
 ### JSON Format
