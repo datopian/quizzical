@@ -67,11 +67,11 @@ function addAnswersToQuestionItem(choices, questionItem) {
 
 function addFeedbackItemToQuestionItem(feedback, questionItem) {
   
-  if (feedback.link == null || feedback.link === "") {
-    feedback.link = DEFAULT_LINK
+  if (feedback.link == null || feedback.link === '') {
+    feedback.link = DEFAULT_FEEDBACK_LINK? DEFAULT_FEEDBACK_LINK : ''
   }
   
-  if (feedback.correct != null && feedback.correct !== "") {
+  if (feedback.correct != null && feedback.correct !== '') {
     var feedbackOnCorrectItem = FormApp.createFeedback()
     .setText(feedback.correct)
     .addLink(feedback.link)
@@ -79,7 +79,7 @@ function addFeedbackItemToQuestionItem(feedback, questionItem) {
     questionItem.setFeedbackForCorrect(feedbackOnCorrectItem);
   }
   
-  if (feedback.incorrect != null && feedback.incorrect !== "") {
+  if (feedback.incorrect != null && feedback.incorrect !== '') {
     var feedbackOnIncorrectItem = FormApp.createFeedback()
     .setText(feedback.incorrect)
     .addLink(feedback.link)
