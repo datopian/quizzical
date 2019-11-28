@@ -16,23 +16,7 @@ The goal of the project is to automatically generate quizzes out of easily reada
 
 ### Domain Model
 
-```mermaid
-classDiagram
-  Quiz *-- "many" Page
-  Page o-- "many" Question
-  Question *-- "many" Answer
-  Question *-- Feedback
-  
-  Quiz: +String title
-  Page: +String title
-  Question: +String text
-  Question: +String description
-  Question: +int points
-  Answer: +String text
-  Answer: +bool isCorrect
-  Feedback: +String correct
-  Feedback: +String incorrect
-```
+![domain model](/public/domain-model.svg)
 
 ### Markdown Format
 
